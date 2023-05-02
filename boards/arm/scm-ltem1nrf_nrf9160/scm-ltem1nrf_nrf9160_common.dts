@@ -6,7 +6,7 @@
 #include "scm-ltem1nrf_nrf9160_common-pinctrl.dtsi"
 
 / {
-	model = "Nordic nRF9160 DK NRF9160";
+	model = "Sakura Internet SCM-LTEM1NRF";
 	compatible = "nordic,nrf9160-dk-nrf9160";
 
 	chosen {
@@ -27,11 +27,11 @@
 		};
 		led2: led_2 {
 			gpios = <&gpio0 6 0>;
-			label = "Green LED 3";
+			label = "LED A";
 		};
 		led3: led_3 {
 			gpios = <&gpio0 7 0>;
-			label = "Green LED 4";
+			label = "LED B";
 		};
 	};
 
@@ -148,13 +148,13 @@
 		slot0_partition: partition@10000 {
 			label = "image-0";
 		};
-		slot0_ns_partition: partition@50000 {
+		slot0_ns_partition: partition@40000 {
 			label = "image-0-nonsecure";
 		};
 		slot1_partition: partition@80000 {
 			label = "image-1";
 		};
-		slot1_ns_partition: partition@c0000 {
+		slot1_ns_partition: partition@b0000 {
 			label = "image-1-nonsecure";
 		};
 		scratch_partition: partition@f0000 {
