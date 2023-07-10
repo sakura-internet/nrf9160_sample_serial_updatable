@@ -51,14 +51,14 @@ led_ptn led_a_ptn[] = {
 	{LED_PTN_TICK_TERM, 0}
 };
 
-void main(void)
+int main(void)
 {
 	const struct device *dev;
 
 	dev = device_get_binding(LED_PWM_DEV_NAME);
 	if (dev == NULL) {
 		LOG_ERR("device_get_binding() failed.");
-		return;
+		return -1;
 	}
 
 	led_set_brightness(dev, 0, 50);
